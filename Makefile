@@ -6,6 +6,9 @@
 usage:
 	@echo "make [build|run|web|kill]"
 #----------------------------------------------------------------------------------
+edit-history eh:
+	vi HISTORY.md
+
 build b:
 	GO111MODULE=on go build -o server
 
