@@ -2,9 +2,10 @@
 # Makefile for go-drawing
 #
 .PHONY: usage edit build clean git
+#----------------------------------------------------------------------------------
 usage:
 	@echo "make [build|run|web|kill]"
-
+#----------------------------------------------------------------------------------
 build b:
 	GO111MODULE=on go build -o server
 
@@ -15,12 +16,11 @@ kill k:
 	pkill server
 
 web w:
-	open http://localhost:8080
+	open http://localhost:8080	# xdg-open in Linux
 	simplehttpserver
 
 clean:
 	rm -f server
-
 #----------------------------------------------------------------------------------
 git g:
 	@echo "make (git:g) [update|store]"
